@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion Arcade</title>
+    <link rel="stylesheet" href="arcade.css">
+</head>
+<body>
+    <div class="container">
+        <div id="menu">
+            <h1>WELCOME TO FUSION ARCADE</h1>
+            <p>Project Made By: Areeb Ahmed, Abdul Hadi, Abdul Wahab</p>
+            <button onclick="showBallBlitz()">Play Ball Blitz</button>
+            <button onclick="showMathQuiz()">Play Math Quiz</button>
+            <button onclick="exitGame()">Quit</button>
+        </div>
+
+        <div id="ballBlitz" class="game" style="display: none;">
+            <canvas id="gameCanvas"></canvas>
+            <div id="scoreboard">
+                <p>Score: <span id="score">0</span></p>
+                <p>Lives: <span id="lives">3</span></p>
+            </div>
+            <button onclick="showMenu()">Back to Menu</button>
+        </div>
+
+        <div id="mathQuiz" class="game" style="display: none;">
+            <h2>Math Quiz</h2>
+            <div id="quizContainer">
+                <p id="question"></p>
+                <div id="options"></div>
+                <button onclick="submitAnswer()">Submit</button>
+                <button onclick="skipQuestion()">Skip</button>
+            </div>
+            <div id="quizResult" style="display: none;"></div>
+            <button onclick="showMenu()">Back to Menu</button>
+        </div>
+    </div>
+    <script src="arcade.js"></script>
+</body>
+</html>
